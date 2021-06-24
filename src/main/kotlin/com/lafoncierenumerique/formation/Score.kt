@@ -1,5 +1,3 @@
 package com.lafoncierenumerique.formation
 
-class Score(server: String, receiver: String) {
-
-}
+data class Score(val server: String, val receiver: String)
