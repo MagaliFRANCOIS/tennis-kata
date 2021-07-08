@@ -16,7 +16,7 @@ class TennisScoreTest {
 
     /*@Test
     @DisplayName("Should Return Game Score")
-    fun GetGameScoreTest (){
+    fun getGameScoreTest(){
         // Given
         val game = Game()
 
