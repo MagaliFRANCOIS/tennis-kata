@@ -108,5 +108,4 @@ class TennisScoreTest {
         // Then
         assertThat(score).isEqualTo(Point("15", player1))
     }
-
 }
