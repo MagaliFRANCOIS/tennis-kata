@@ -92,4 +92,21 @@ class TennisScoreTest {
         assertThat(score).isEqualTo(Point("0", player2))
     }
 
+    @Test
+    @DisplayName("Should display score when player 1 win exchange")
+    fun GetPlayer1ScoreAfterWinExchange () {
+        // Given
+        val player1 = Player("Joueur 1")
+        val player2 = Player ("Joueur 2")
+
+        val game = Game(player1, player2)
+
+        // When
+        val score = game.getScoreOf(player1)
+        score = game.addPointPlayer(player1)
+
+        // Then
+
+    }
+
 }
