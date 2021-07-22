@@ -1,7 +1,9 @@
 package com.lafoncierenumerique.formation
 
+import java.lang.IllegalArgumentException
+
 class Game (private val player1 : Player, private val player2 : Player) {
-    var hasPlayer1Score = false
+    var hasPlayer1Score: Int = 0
     fun getScore() : Score {
         val point1 = Point("0", player1)
         val point2 = Point("0", player2)
@@ -10,13 +12,16 @@ class Game (private val player1 : Player, private val player2 : Player) {
     }
 
     fun getScoreOf(player: Player): Point {
-        if (hasPlayer1Score)
-            return Point("15", player)
-        return Point("0", player)
+        return when (hasPlayer1Score) {
+            0 -> Point("0", player)
+            1 -> Point("15", player)
+            2 -> Point("30", player)
+            else -> throw IllegalArgumentException("$hasPlayer1Score")
+        }
     }
 
     fun addPointPlayer(player1: Player) {
-        hasPlayer1Score = true
+        hasPlayer1Score += 1
     }
 
 }
