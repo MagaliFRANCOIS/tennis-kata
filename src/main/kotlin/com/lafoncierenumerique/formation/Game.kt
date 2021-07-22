@@ -12,4 +12,9 @@ class Game (private val player1 : Player, private val player2 : Player) {
         return Point("0", player)
     }
 
+    fun addPointPlayer(player1: Player) {
+
+
+    }
+
 }

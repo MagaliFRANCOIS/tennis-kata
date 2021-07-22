@@ -102,11 +102,11 @@ class TennisScoreTest {
         val game = Game(player1, player2)
 
         // When
-        val score = game.getScoreOf(player1)
-        score = game.addPointPlayer(player1)
+         game.addPointPlayer(player1)
+         val score = game.getScoreOf(player1)
 
         // Then
-
+        assertThat(score).isEqualTo(Point("15", player1))
     }
 
 }
